@@ -1,0 +1,27 @@
+img {
+    height: 100px;
+    width: auto;
+}
+
+ion-content{
+    padding-top: 2em;
+}
+
+ion-card {
+    max-width: 400px;
+    min-height: 200px;
+    margin: auto;
+    display: flex;
+    margin-top: 2em;
+}
+
+ion-card-title {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.card-subtitle {
+    border: 1px solid black;
+    min-height: 50px;
+}
+

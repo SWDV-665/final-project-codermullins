@@ -1,0 +1,93 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="title-container">
+    <ion-text class="login-text">Login</ion-text>
+  </div>
+  <div class="title-header">Please login to see you reviews</div>
+
+  <form #form="ngForm" (ngSubmit)="onSubmit()">
+    <ion-card>
+      <div *ngIf="submissionType !== 'login'">
+        <ion-item>
+          <ion-label position="floating">Name</ion-label>
+          <ion-input
+            #nameInput="ngModel"
+            ngModel
+            type="text"
+            name="name"
+            required
+          ></ion-input>
+        </ion-item>
+        <ion-text color="danger" *ngIf="!nameInput.valid && nameInput.touched"
+          >Please enter your name</ion-text
+        >
+      </div>
+      <ion-item>
+        <ion-label position="floating">Email</ion-label>
+        <ion-input
+          #emailInput="ngModel"
+          ngModel
+          type="text"
+          name="email"
+          required
+        ></ion-input>
+      </ion-item>
+      <ion-text color="danger" *ngIf="!emailInput.valid && emailInput.touched"
+        >Please enter an Email</ion-text
+      >
+      <ion-item>
+        <ion-label position="floating">Password</ion-label>
+        <ion-input
+          #passwordInput="ngModel"
+          ngModel
+          type="text"
+          name="password"
+          required
+        ></ion-input>
+      </ion-item>
+      <ion-text
+        color="danger"
+        *ngIf="!passwordInput.valid && passwordInput.touched"
+        >Please enter Password</ion-text
+      >
+      <div *ngIf="submissionType !== 'login'">
+        <ion-item>
+          <ion-label position="floating">Reenter Password</ion-label>
+          <ion-input
+            #repasswordInput="ngModel"
+            ngModel
+            type="text"
+            name="repassword"
+            required
+          ></ion-input>
+        </ion-item>
+        <ion-text
+          color="danger"
+          *ngIf="!repasswordInput.valid && repasswordInput.touched"
+          >Please reenter Password</ion-text
+        >
+      </div>
+
+      <ion-button
+        [disabled]="!form.valid"
+        type="submit"
+        shape="round"
+        expand="block"
+      >
+        {{ submissionType == 'login' ? 'Login' : 'Join' }}
+      </ion-button>
+    </ion-card>
+  </form>
+  <div class="toggle-text">
+    {{ submissionType === 'login' ? 'Need an account? ' : 'Already have an
+    account?' }}
+    <ion-text color="primary" (click)="toggleText()">
+      {{ submissionType === 'login' ? 'Create One' : 'Sign In' }}
+    </ion-text>
+  </div>
+</ion-content>
