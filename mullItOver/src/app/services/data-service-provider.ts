@@ -12,8 +12,7 @@ export class ReviewServiceProvider {
 
     private dataChangedSubject: Subject<boolean>;
 
-    //TODO change to heroku link
-    baseURL = "http://localhost:8080";
+    baseURL = "https://review-heroku-server-5ec569194fcc.herokuapp.com";
 
     constructor(public http: HttpClient) {
         console.log('This is the Review Provider');

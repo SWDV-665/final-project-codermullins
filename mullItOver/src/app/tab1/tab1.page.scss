@@ -5,6 +5,15 @@ img {
 
 ion-content{
     padding-top: 2em;
+
+}
+
+.homeBackground {
+    background-image: url("https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg");
+    height: auto;
+    background-size: auto;
+    background-repeat: no-repeat;
+
 }
 
 ion-card {
@@ -13,6 +22,7 @@ ion-card {
     margin: auto;
     display: flex;
     margin-top: 2em;
+
 }
 
 ion-card-title {
@@ -25,3 +35,10 @@ ion-card-title {
     min-height: 50px;
 }
 
+.mtListImage {
+    min-width: 500px;
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
