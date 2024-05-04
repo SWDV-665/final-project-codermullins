@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ./groceries-server/server.js",
-    "install": "cd groceries && npm install && cd .."
+    "start": "node ./server/server.js",
+    "install": "cd MullItOver && npm install && cd .."
   },
   "keywords": [],
   "author": "",
