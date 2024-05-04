@@ -9,7 +9,8 @@ const { name } = require("mustache");
 
 // Configuration
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/reviews"
+  process.env.MONGODB_URI ||
+    "mongodb+srv://cmullins3:Madness08@cluster2.nksxwlv.mongodb.net/reviews"
 );
 
 app.use(bodyParser.urlencoded({ extended: "true" }));
